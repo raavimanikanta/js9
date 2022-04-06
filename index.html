@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Objects in javaScript</h2>
+    <p>Objects are non-primitive datatypes.In objects the data is stored as key and value pairs .we can store any dataTypes in object.</p>
+     <h3>Example:<pre>
+         const obj={
+             name:"manikanta",
+             id:20,
+             college:"pragati",
+         }
+     </pre></h3>
+     <h2>Different ways to create the objects </h2>
+     <p>Objects can be created in three ways: </p>
+     <ul>
+         <li>object literals</li>
+         <li>object instance</li>
+         <li>function constructor</li>
+     </ul>
+     <h2>object instance</h2>
+     <p>In this type objects are created by using the new keyword. </p>
+     <h3>Example:<pre>
+         const object=new Object() 
+             object.name="manikanta"
+             object.id=22,
+             object.college="pragati"
+         console.log(object)
+         Output:
+         object:-
+         {
+            college: "pragati"
+            id: 22
+            name1: "manikanta"
+         }
+     </pre></h3>
+
+     <h2>Object literals </h2>
+     <p>Objects are in the normal manner and it is the simple of creating of objects.</p>
+     <h3>Example:<pre>
+         const obj={
+             name:"manikanta",
+            age:23,
+            location:"mumbai"
+         }
+     </pre></h3>
+     <h2>Objects using function constructor</h2>
+     <p>These are used to create the objects in js .Objects are created using new keyword .This method is useful for creating the objects with similar properties.</p>
+     <h3>Example:<pre>
+         function Person (name,age,college) {
+             this.name=name;
+             this.age=age;
+             this.college=college;
+         }
+         const newObj=new Person ("Varma" ,23,"Narayana")
+         console.log(newObj)
+     </pre></h3>
+     <h2>Objects Keys and objects value</h2>
+     <h3>Object Keys</h3>
+     <p>Object.keys are used in js,it returns all key propeties of the object.</p>
+     <h3>Example:<pre>
+         var obj={
+             name:"manikanta",
+             age:23,
+             college:"pragati"
+         }
+         console.log(Object.keys(obj))
+
+    output:['name', 'age', 'college']
+     </pre></h3>
+
+     <h3>Object value</h3>
+     <p>Object.values are used in js,it returns all values of the object.</p>
+     <h3>Example:<pre>
+         var obj={
+             name:"manikanta",
+             age:23,
+             college:"pragati"
+         }
+         console.log(Object.values(obj))
+
+    output:['manikanta',23, 'pragati']
+     </pre></h3>
+     <h2>Spread operator</h2>
+     <p>Spread operator is used to separate the elements of array ,string ,or objects to the individual elements. </p>
+      <h3>Example:<pre>
+        const objSpread={
+            name:'manikanta',
+            age:23,
+        }
+         const objSpread2={
+             ...objSpread,
+             college:"Pragati"
+         }
+         console.log(objSpread2)
+     output:
+     objSpread2={
+         name:"manikanta",
+         age:23,
+         college:"pragati",
+     }        
+      </pre></h3>
+      <h2>This keyword</h2>
+      <p>This keyword refers to the current object .</p>
+      <h3>Example:<pre>
+          const obj={
+              name:"manikanta",
+              age:23,
+              method1:function(){
+                  console.log(`my name is  ${this.name} iam ${this.age} years old  )
+              }
+          }
+          obj.method1();
+      </pre></h3>
+     <script src="./script.js"></script>
+    </body>
+</html>
